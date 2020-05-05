@@ -68,29 +68,32 @@ $(function() {
   $('.q21').wrapAll('<div class="ddd"></div>');
 
   // 問22.class名「q22」が付くすべての要素内テキストをclass名「ddd」のdiv要素で囲みなさい
-  
+  $('.q22').wrapInner('<div class="ddd"></div>');
 
   // 問23.class名「q23」が付くすべての要素すべてを「xxx」のp要素に置き換えなさい
-
+  $('.q23').replaceWith('<p>xxx</p>');
 
   // 問24.class名「q24」要素のclass名を「q24_a」に書き換えなさい
-
+  $('.q24').attr('class','q24_a');
 
   // 問25.class名「q25」が付いている要素のaタグのhref属性を削除せよ
-
+  $('.q25 a').removeAttr('href');
 
   // 問26.class名「q26」が付いている要素のaタグに別窓表示の属性を追加せよ
-
+  $('.q26 a').attr('target","_blank');
 
   // 問27.class名「q27_a」要素をclass名「q27_b」に切り替えよ
-
+  $('.q27_a').toggleClass('q27_b');
 
   // 問28.フォームに入力値を「入力してください」に書き換えなさい
-
+  $('form input').val('入力してください');
 
   // 問29.id名「q29」の要素をブラウザ上5430px、左800px値の位置で表示せよ
-
+  $('#q29').offset({ top: 5430, left: 800});
 
   // 問30.p要素をクリックしたら直下のulの子要素を全て空にせよ ※空のliタグも残さないこと
+  $('.button').click(function() {
+    $('#q30').empty();
+  });
 
 });
